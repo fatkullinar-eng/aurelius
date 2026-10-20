@@ -1,0 +1,812 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AURELIUS — закрытый торговый клуб</title>
+  <meta name="description" content="AURELIUS — закрытый торговый клуб для трейдеров и владельцев капитала. Сигналы с расчётом риска, алгоритмы, индикаторы и наставничество. Доступ по заявке.">
+  <meta name="theme-color" content="#07060a">
+  <!-- Черновая публикация: запрет индексации. После замены данных на реальные
+       замените noindex, nofollow на index, follow. -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph: карточка сайта при отправке ссылки в Telegram и соцсети -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="AURELIUS">
+  <meta property="og:title" content="AURELIUS — закрытый торговый клуб">
+  <meta property="og:description" content="Не сигналы, а система. Закрытый клуб, где вход, стоп и доля риска рассчитываются до сделки.">
+  <meta property="og:image" content="assets/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- После подключения домена добавьте сюда канонический адрес:
+       <link rel="canonical" href="https://ваш-домен.ru/"> -->
+
+  <!--
+    АНАЛИТИКА.
+    Сюда вставляется код счётчика Яндекс.Метрики или Google Analytics.
+    Пока счётчика нет — блок остаётся закомментированным.
+  -->
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AURELIUS",
+    "alternateName": "AURELIUS Private Trading Club",
+    "slogan": "Капитал любит тишину",
+    "description": "Закрытый торговый клуб для трейдеров и владельцев капитала: сигналы с расчётом риска, торговые алгоритмы, индикаторы и наставничество."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="AURELIUS — на главную">
+        <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 3 45 24 24 45 3 24 24 3Z" stroke="currentColor" stroke-width="1"/>
+          <path d="M24 11 37 24 24 37 11 24 24 11Z" stroke="currentColor" stroke-width="1" opacity=".45"/>
+          <path d="M24 16v16M16 24h16" stroke="currentColor" stroke-width="1"/>
+        </svg>
+        <span class="brand__text">
+          <span class="brand__name">AURELIUS</span>
+          <span class="brand__sub">Private Trading Club</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Основная навигация">
+        <a href="#club">Клуб</a>
+        <a href="#principles">Принципы</a>
+        <a href="#desk">Продукты</a>
+        <a href="#record">Результаты</a>
+        <a href="#circle">Отзывы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+
+      <a class="btn btn--ghost btn--small header__cta" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Запросить доступ</a>
+
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <div class="mobile-menu__inner">
+      <nav class="mobile-menu__nav" aria-label="Мобильная навигация">
+        <a href="#club">Клуб</a>
+        <a href="#principles">Принципы</a>
+        <a href="#desk">Продукты</a>
+        <a href="#record">Результаты</a>
+        <a href="#circle">Отзывы</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn--primary" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Запросить доступ <span aria-hidden="true">→</span></a>
+      <p class="mobile-menu__note">Доступ по заявке. Без обещаний доходности.</p>
+    </div>
+  </div>
+
+  <main id="main">
+
+    <!-- ============ 01. ГЛАВНЫЙ ЭКРАН ============ -->
+    <section class="hero" id="top">
+      <div class="hero__grid" aria-hidden="true"></div>
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__halo" aria-hidden="true"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="eyebrow reveal">Private Trading Club · По заявке</p>
+          <!-- ГЛАВНЫЙ ЗАГОЛОВОК. Меняйте здесь. -->
+          <h1 class="reveal" style="--d:.08s">Капитал любит<br><em>тишину.</em></h1>
+          <!-- КОРОТКОЕ ОПИСАНИЕ КЛУБА ПОД ЗАГОЛОВКОМ. -->
+          <p class="hero__lead reveal" style="--d:.16s">AURELIUS — закрытое сообщество трейдеров и владельцев капитала. Сигналы с расчётом риска, торговые алгоритмы, индикаторы и наставничество — в одном контуре. Без шума, обещаний и азарта.</p>
+
+          <div class="hero__actions reveal" style="--d:.24s">
+            <a class="btn btn--primary" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Запросить доступ <span aria-hidden="true">→</span></a>
+            <a class="btn btn--ghost" href="#desk">Смотреть продукты</a>
+          </div>
+
+          <p class="hero__micro reveal" style="--d:.3s">Не управляем средствами. Не обещаем доходность.</p>
+        </div>
+
+        <div class="hero__visual reveal" style="--d:.2s">
+          <div class="desk-card">
+            <div class="desk-card__top">
+              <span class="desk-card__label">Aurelius / Risk First</span>
+              <span class="desk-card__status"><i aria-hidden="true"></i>Private Desk</span>
+            </div>
+
+            <div class="desk-card__chart">
+              <svg id="heroChart" class="chart-svg" viewBox="0 0 640 340" role="img" aria-label="Схематичный график рынка: свечи, объёмы и линия тренда">
+                <defs>
+                  <linearGradient id="areaFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#7a5af8" stop-opacity=".26"/>
+                    <stop offset="100%" stop-color="#7a5af8" stop-opacity="0"/>
+                  </linearGradient>
+                  <linearGradient id="lineGold" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#c9a96a"/>
+                    <stop offset="50%" stop-color="#f0dfb8"/>
+                    <stop offset="100%" stop-color="#e6d3a3"/>
+                  </linearGradient>
+                </defs>
+
+                <g class="chart-grid" stroke="#ffffff" stroke-opacity=".055">
+                  <line x1="0" y1="60" x2="640" y2="60"/>
+                  <line x1="0" y1="120" x2="640" y2="120"/>
+                  <line x1="0" y1="180" x2="640" y2="180"/>
+                  <line x1="0" y1="240" x2="640" y2="240"/>
+                  <line x1="0" y1="300" x2="640" y2="300"/>
+                </g>
+                <g class="chart-grid" stroke="#ffffff" stroke-opacity=".035">
+                  <line x1="80" y1="0" x2="80" y2="340"/>
+                  <line x1="160" y1="0" x2="160" y2="340"/>
+                  <line x1="240" y1="0" x2="240" y2="340"/>
+                  <line x1="320" y1="0" x2="320" y2="340"/>
+                  <line x1="400" y1="0" x2="400" y2="340"/>
+                  <line x1="480" y1="0" x2="480" y2="340"/>
+                  <line x1="560" y1="0" x2="560" y2="340"/>
+                </g>
+
+                <path id="heroArea" class="trend-area" fill="url(#areaFill)"></path>
+                <g id="heroVolumes"></g>
+                <g id="heroCandles"></g>
+                <path id="heroTrend" class="trend-line" pathLength="1" fill="none" stroke="url(#lineGold)" stroke-width="1.8" stroke-linecap="round"></path>
+
+                <g id="heroLive" class="chart-live">
+                  <circle class="chart-live__ring" r="9"></circle>
+                  <circle class="chart-live__dot" r="3"></circle>
+                </g>
+
+                <line id="heroScan" class="scan-line" x1="0" y1="22" x2="0" y2="300"></line>
+                <text x="626" y="332" text-anchor="end" class="chart-note">СХЕМА</text>
+              </svg>
+            </div>
+
+            <div class="desk-card__bottom">
+              <div><span class="k">Принцип</span><span class="v">Риск до входа</span></div>
+              <div><span class="k">Ориентир риска</span><span class="v">1% на сделку</span></div>
+              <div><span class="k">Доступ</span><span class="v">По заявке</span></div>
+            </div>
+          </div>
+
+          <div class="float-card float-card--metals" aria-hidden="true">
+            <div class="float-card__head">
+              <span>XAUUSD</span>
+              <span class="float-card__tag">Metals</span>
+            </div>
+            <svg class="spark" viewBox="0 0 140 44" aria-hidden="true">
+              <path class="spark-line" pathLength="1" d="M2 36 L18 33 L30 35 L44 26 L58 29 L72 20 L86 23 L100 14 L114 17 L128 8 L138 10" fill="none" stroke="#c9a96a" stroke-width="1.4" stroke-linecap="round"/>
+              <circle class="spark-dot" cx="138" cy="10" r="2.4" fill="#e6d3a3"/>
+            </svg>
+            <div class="float-card__foot">
+              <span>Risk first</span>
+              <span>01</span>
+            </div>
+          </div>
+
+          <div class="float-card float-card--indices" aria-hidden="true">
+            <div class="float-card__head">
+              <span>US500</span>
+              <span class="float-card__tag">Indices</span>
+            </div>
+            <svg class="spark" viewBox="0 0 140 44" aria-hidden="true">
+              <path class="spark-line" pathLength="1" d="M2 30 L16 32 L30 24 L44 27 L58 18 L72 21 L86 12 L100 16 L114 8 L128 12 L138 5" fill="none" stroke="#8f78f0" stroke-width="1.4" stroke-linecap="round"/>
+              <circle class="spark-dot" cx="138" cy="5" r="2.4" fill="#b9a6ff"/>
+            </svg>
+            <div class="float-card__foot">
+              <span>Structure</span>
+              <span>02</span>
+            </div>
+          </div>
+        </div>
+
+        <ul class="hero-facts reveal" style="--d:.38s">
+          <li><span>01</span>Расчёт риска<br>до входа</li>
+          <li><span>02</span>Закрытый<br>контур</li>
+          <li><span>03</span>Доступ<br>по заявке</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track">
+        <div class="ticker__group">
+          <span class="ticker__item">EURUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">XAUUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">BTCUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">US500</span><span class="ticker__dot"></span>
+          <span class="ticker__item">GER40</span><span class="ticker__dot"></span>
+          <span class="ticker__item">USDJPY</span><span class="ticker__dot"></span>
+          <span class="ticker__item">GBPUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">NAS100</span><span class="ticker__dot"></span>
+        </div>
+        <div class="ticker__group">
+          <span class="ticker__item">EURUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">XAUUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">BTCUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">US500</span><span class="ticker__dot"></span>
+          <span class="ticker__item">GER40</span><span class="ticker__dot"></span>
+          <span class="ticker__item">USDJPY</span><span class="ticker__dot"></span>
+          <span class="ticker__item">GBPUSD</span><span class="ticker__dot"></span>
+          <span class="ticker__item">NAS100</span><span class="ticker__dot"></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 02. О КЛУБЕ ============ -->
+    <section class="section" id="club">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>01</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">The House</p>
+            <h2 class="section-title">Не клуб сигналов.<br><em>Частный торговый дом.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Закрытое место для тех, кто относится к рынку как к делу. Здесь не продают мечту — здесь выстраивают процесс.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p>AURELIUS создан для трейдеров и владельцев капитала, которым нужна система, а не очередной громкий чат. Мы соединяем аналитику, инструменты и риск-менеджмент в один понятный процесс: от идеи до закрытой сделки и разбора результата.</p>
+            <p>Мы верим, что капитал растёт не от громких прогнозов, а от дисциплины. Поэтому в основе клуба — правила, которые не меняются от настроения рынка.</p>
+
+            <ul class="mini-list">
+              <li><span>01</span>Сначала риск — потом прибыль</li>
+              <li><span>02</span>Прозрачность вместо обещаний</li>
+              <li><span>03</span>Закрытое сообщество вместо массового чата</li>
+            </ul>
+          </div>
+
+          <blockquote class="club-quote reveal" style="--d:.1s">
+            <span class="club-quote__mark" aria-hidden="true">“</span>
+            <p>Хорошая сделка начинается не с графика, а с вопроса: сколько я готов потерять?</p>
+            <footer>Принцип клуба</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03. ПРЕИМУЩЕСТВА ============ -->
+    <section class="section section--divided" id="principles">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>02</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">The Principles</p>
+            <h2 class="section-title">Почему участники<br><em>остаются.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Шесть принципов, на которых держится клуб. Без них любой результат — случайность.</p>
+        </div>
+
+        <div class="principles-grid">
+          <article class="principle reveal">
+            <span class="principle__num">01</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M12 3 19.5 6v5.4c0 4.4-3.1 8.2-7.5 9.6-4.4-1.4-7.5-5.2-7.5-9.6V6L12 3Z"/>
+              <path d="m8.8 12 2.1 2.1 4.3-4.3"/>
+            </svg>
+            <h3>Риск до сделки</h3>
+            <p>Сначала расчёт, потом вход. Стоп и доля риска известны до нажатия кнопки.</p>
+          </article>
+
+          <article class="principle reveal" style="--d:.05s">
+            <span class="principle__num">02</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z"/>
+              <circle cx="12" cy="12" r="2.8"/>
+            </svg>
+            <h3>Прозрачная логика</h3>
+            <p>У каждой рекомендации есть обоснование. Вы понимаете, почему, а не просто что.</p>
+          </article>
+
+          <article class="principle reveal" style="--d:.1s">
+            <span class="principle__num">03</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <rect x="4.5" y="10" width="15" height="11" rx="1.5"/>
+              <path d="M8 10V7.5a4 4 0 0 1 8 0V10"/>
+            </svg>
+            <h3>Закрытый контур</h3>
+            <p>Ограниченное число участников. Доступ по заявке, а не по кнопке «купить».</p>
+          </article>
+
+          <article class="principle reveal" style="--d:.15s">
+            <span class="principle__num">04</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="m12 3 9 5-9 5-9-5 9-5Z"/>
+              <path d="m3 12 9 5 9-5"/>
+              <path d="m3 16 9 5 9-5"/>
+            </svg>
+            <h3>Система, а не прогнозы</h3>
+            <p>Аналитика, алгоритмы и риск-менеджмент собраны в один процесс.</p>
+          </article>
+
+          <article class="principle reveal" style="--d:.2s">
+            <span class="principle__num">05</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M20 14.5A8.5 8.5 0 0 1 9.5 4 8.5 8.5 0 1 0 20 14.5Z"/>
+            </svg>
+            <h3>Среда без шума</h3>
+            <p>Никаких криков о «сигнале века». Только сдержанные разборы и факты.</p>
+          </article>
+
+          <article class="principle reveal" style="--d:.25s">
+            <span class="principle__num">06</span>
+            <svg class="principle__icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <circle cx="9" cy="8" r="3.2"/>
+              <path d="M2.5 20c0-3.6 2.9-6.5 6.5-6.5s6.5 2.9 6.5 6.5"/>
+              <path d="M16 5.2a3.2 3.2 0 0 1 0 6.1"/>
+              <path d="M17.5 13.8c2.4.6 4 2.8 4 5.4"/>
+            </svg>
+            <h3>Сопровождение</h3>
+            <p>Вопросы по сделкам и инструментам решаются внутри клуба, а не в очереди поддержки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04. ПРОДУКТЫ ============ -->
+    <section class="section section--divided" id="desk">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>03</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">The Desk</p>
+            <h2 class="section-title">Четыре направления.<br><em>Один контур.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Можно начать с одного продукта. Можно собрать полный набор — под ваш опыт, капитал и ритм.</p>
+        </div>
+
+        <!-- ПРОДУКТЫ. Названия, описания, списки и кнопки — внутри карточек. -->
+        <div class="products-grid">
+          <article class="product product--featured reveal">
+            <div class="product__head">
+              <span class="product__num">01</span>
+              <span class="product__tag">Флагман</span>
+            </div>
+            <h3 class="product__name">Aurelius Desk</h3>
+            <p class="product__subtitle">Сигналы с расчётом риска</p>
+            <p class="product__text">Готовые сценарии по валютным парам, металлам и индексам. В каждом — точка входа, стоп, цель и доля риска. Без призывов «входить сейчас».</p>
+            <ul class="product__list">
+              <li>Вход, стоп и цель в одном сообщении</li>
+              <li>Риск на сделку — до 1% капитала</li>
+              <li>Разбор закрытых позиций</li>
+            </ul>
+            <div class="product__foot">
+              <span>Условия — по запросу</span>
+              <a class="product__link" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Обсудить формат <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product reveal" style="--d:.06s">
+            <div class="product__head">
+              <span class="product__num">02</span>
+              <span class="product__tag">Алгоритмы</span>
+            </div>
+            <h3 class="product__name">Aurelius Quant</h3>
+            <p class="product__subtitle">Торговые алгоритмы</p>
+            <p class="product__text">Автоматические стратегии для дисциплины и скорости. Настраиваем под ваш риск-профиль и сопровождаем после запуска.</p>
+            <ul class="product__list">
+              <li>Работают по регламенту, без эмоций</li>
+              <li>Настройка под ваш капитал</li>
+              <li>Сопровождение и отчётность</li>
+            </ul>
+            <div class="product__foot">
+              <span>Условия — по запросу</span>
+              <a class="product__link" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Обсудить формат <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product reveal" style="--d:.12s">
+            <div class="product__head">
+              <span class="product__num">03</span>
+              <span class="product__tag">Инструменты</span>
+            </div>
+            <h3 class="product__name">Aurelius Terminal</h3>
+            <p class="product__subtitle">Индикаторы и панель риска</p>
+            <p class="product__text">Набор инструментов для собственного терминала: структура рынка, уровни и контроль риска в одном окне.</p>
+            <ul class="product__list">
+              <li>Индикаторы для MT4 и MT5</li>
+              <li>Панель расчёта лота</li>
+              <li>Инструкция по установке</li>
+            </ul>
+            <div class="product__foot">
+              <span>Условия — по запросу</span>
+              <a class="product__link" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Обсудить формат <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="product reveal" style="--d:.18s">
+            <div class="product__head">
+              <span class="product__num">04</span>
+              <span class="product__tag">Наставничество</span>
+            </div>
+            <h3 class="product__name">Aurelius Circle</h3>
+            <p class="product__subtitle">Разборы и персональный план</p>
+            <p class="product__text">Закрытые встречи, разбор сделок и персональный план. Для тех, кто хочет не просто получать сигналы, а понимать логику.</p>
+            <ul class="product__list">
+              <li>Еженедельные разборы</li>
+              <li>Персональный риск-профиль</li>
+              <li>Обратная связь по вашим сделкам</li>
+            </ul>
+            <div class="product__foot">
+              <span>Условия — по запросу</span>
+              <a class="product__link" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Обсудить формат <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 05. РЕЗУЛЬТАТЫ ============ -->
+    <section class="section section--divided" id="record">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>04</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">The Record</p>
+            <h2 class="section-title">Результаты,<br><em>которые можно проверить.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Мы не публикуем обещания доходности. Полная история сделок, журнал рисков и разборы доступны участникам клуба.</p>
+        </div>
+
+        <!-- ЦИФРЫ РАЗДЕЛА «РЕЗУЛЬТАТЫ». Значение меняется в data-count, подпись — в metric__label. -->
+        <div class="metrics">
+          <div class="metric reveal">
+            <div class="metric__num"><span data-count="4">4</span></div>
+            <div class="metric__label">Направления</div>
+          </div>
+          <div class="metric reveal" style="--d:.05s">
+            <div class="metric__num"><span data-count="1">1</span><span>%</span></div>
+            <div class="metric__label">Ориентир риска на сделку</div>
+          </div>
+          <div class="metric reveal" style="--d:.1s">
+            <div class="metric__num">24/7</div>
+            <div class="metric__label">Доступ к материалам</div>
+          </div>
+          <div class="metric reveal" style="--d:.15s">
+            <div class="metric__num"><span data-count="1">1</span></div>
+            <div class="metric__label">Персональный куратор</div>
+          </div>
+        </div>
+
+        <div class="record-grid">
+          <div class="panel record-panel reveal">
+            <div class="panel__head">
+              <span>Aurelius Record</span>
+              <span class="panel__tag">Иллюстрация</span>
+            </div>
+
+            <svg class="chart-svg record-chart" viewBox="0 0 720 320" role="img" aria-label="Иллюстративный график, не являющийся отчётом о доходности">
+              <defs>
+                <linearGradient id="recordArea" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#7a5af8" stop-opacity=".24"/>
+                  <stop offset="100%" stop-color="#7a5af8" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="recordLine" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stop-color="#8a6b34"/>
+                  <stop offset="50%" stop-color="#e6d3a3"/>
+                  <stop offset="100%" stop-color="#c9a96a"/>
+                </linearGradient>
+              </defs>
+
+              <g stroke="#ffffff" stroke-opacity=".05">
+                <line x1="0" y1="60" x2="720" y2="60"/>
+                <line x1="0" y1="120" x2="720" y2="120"/>
+                <line x1="0" y1="180" x2="720" y2="180"/>
+                <line x1="0" y1="240" x2="720" y2="240"/>
+              </g>
+
+              <path class="chart-area" d="M0 280 C40 278 60 266 96 270 C132 274 150 246 186 250 C222 254 240 222 276 228 C312 234 332 196 368 184 C404 172 424 192 460 166 C496 140 516 148 552 120 C588 92 620 100 652 74 C678 54 700 50 720 44 L720 320 L0 320 Z" fill="url(#recordArea)"/>
+              <path class="chart-line" d="M0 280 C40 278 60 266 96 270 C132 274 150 246 186 250 C222 254 240 222 276 228 C312 234 332 196 368 184 C404 172 424 192 460 166 C496 140 516 148 552 120 C588 92 620 100 652 74 C678 54 700 50 720 44" fill="none" stroke="url(#recordLine)" stroke-width="2" stroke-linecap="round"/>
+
+              <g class="chart-points" fill="#07060a" stroke="#e6d3a3" stroke-width="1.4">
+                <circle cx="186" cy="250" r="3.6"/>
+                <circle cx="368" cy="184" r="3.6"/>
+                <circle cx="552" cy="120" r="3.6"/>
+              </g>
+            </svg>
+
+            <p class="panel__caption">Иллюстрация. Не является отчётом о доходности. Реальная история сделок доступна участникам клуба.</p>
+          </div>
+
+          <div class="panel ticket reveal" style="--d:.1s">
+            <div class="panel__head">
+              <span>Формат сигнала</span>
+              <span class="panel__tag panel__tag--gold">Пример</span>
+            </div>
+
+            <div class="ticket__pair">
+              <span class="ticket__symbol">XAUUSD</span>
+              <span class="ticket__dir">Long</span>
+            </div>
+
+            <div class="ticket__rows">
+              <div class="ticket__row"><span>Вход</span><strong>2 412.50</strong></div>
+              <div class="ticket__row"><span>Стоп</span><strong>2 398.00</strong></div>
+              <div class="ticket__row"><span>Цель</span><strong>2 448.00</strong></div>
+              <div class="ticket__row"><span>Риск</span><strong>1.0%</strong></div>
+              <div class="ticket__row"><span>Соотношение</span><strong>1 : 2.4</strong></div>
+            </div>
+
+            <p class="panel__caption">Пример оформления. Не является рекомендацией.</p>
+
+            <a class="ticket__link" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Получить доступ <span aria-hidden="true">→</span></a>
+          </div>
+        </div>
+
+        <p class="record-note reveal"><span aria-hidden="true"></span>Торговля на финансовых рынках связана с риском потери капитала. Прошлые результаты не гарантируют будущих.</p>
+      </div>
+    </section>
+
+    <!-- ============ 06. ОТЗЫВЫ ============ -->
+    <section class="section section--divided" id="circle">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>05</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">The Circle</p>
+            <h2 class="section-title">Голоса<br><em>клуба.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Сдержанные отзывы о процессе, а не о прибыли. Именно так выглядит среда, в которой хочется остаться.</p>
+        </div>
+
+        <p class="demo-note reveal">Ниже — примеры оформления. Перед публикацией замените их на реальные отзывы участников.</p>
+
+        <!-- ОТЗЫВЫ. Замените демонстрационные тексты на реальные и удалите строку demo-note выше. -->
+        <div class="reviews-grid">
+          <article class="review reveal">
+            <span class="review__mark" aria-hidden="true">“</span>
+            <p>Раньше я открывал сделки на эмоциях. Здесь первым делом спрашивают про риск — и это меняет всё.</p>
+            <footer>
+              <span class="review__avatar">01</span>
+              <span class="review__author"><strong>Участник клуба</strong><small>Направление DESK</small></span>
+            </footer>
+          </article>
+
+          <article class="review reveal" style="--d:.06s">
+            <span class="review__mark" aria-hidden="true">“</span>
+            <p>Ценю тишину. Нет сотни сообщений в день и давления. Есть разбор, понятный план и уважение к капиталу.</p>
+            <footer>
+              <span class="review__avatar">02</span>
+              <span class="review__author"><strong>Участник клуба</strong><small>Направление CIRCLE</small></span>
+            </footer>
+          </article>
+
+          <article class="review reveal" style="--d:.12s">
+            <span class="review__mark" aria-hidden="true">“</span>
+            <p>Алгоритмы закрыли мою главную проблему — дисциплину. Я перестал спорить с рынком и начал следовать плану.</p>
+            <footer>
+              <span class="review__avatar">03</span>
+              <span class="review__author"><strong>Участник клуба</strong><small>Направление QUANT</small></span>
+            </footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 07. КАК ПРИСОЕДИНИТЬСЯ ============ -->
+    <section class="section section--divided" id="access">
+      <div class="container">
+        <div class="section-head">
+          <div class="section-num reveal"><span>06</span><i aria-hidden="true"></i></div>
+          <div class="section-head__main reveal" style="--d:.06s">
+            <p class="eyebrow">Access</p>
+            <h2 class="section-title">Три шага<br><em>до доступа.</em></h2>
+          </div>
+          <p class="section-head__lead reveal" style="--d:.12s">Без длинных анкет и автопродлений. Сначала — разговор, потом решение.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step reveal">
+            <span class="step__num">01</span>
+            <h3>Заявка</h3>
+            <p>Оставьте запрос в Telegram. Коротко расскажите о себе, опыте и задаче.</p>
+          </article>
+          <article class="step reveal" style="--d:.06s">
+            <span class="step__num">02</span>
+            <h3>Знакомство</h3>
+            <p>Обсуждаем цели, капитал и формат участия. Подбираем направление без давления.</p>
+          </article>
+          <article class="step reveal" style="--d:.12s">
+            <span class="step__num">03</span>
+            <h3>Доступ</h3>
+            <p>После согласования открываем доступ к выбранным продуктам и куратору.</p>
+          </article>
+        </div>
+
+        <div class="access-cta reveal">
+          <a class="btn btn--primary" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Запросить доступ <span aria-hidden="true">→</span></a>
+          <span>Ответим в Telegram и предложим удобное время для разговора.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 08. FAQ ============ -->
+    <section class="section section--divided" id="faq">
+      <div class="container">
+        <div class="faq-grid">
+          <div class="faq-intro">
+            <div class="section-num reveal"><span>07</span><i aria-hidden="true"></i></div>
+            <p class="eyebrow reveal" style="--d:.04s">Questions</p>
+            <h2 class="section-title reveal" style="--d:.08s">Частые<br><em>вопросы.</em></h2>
+            <p class="faq-intro__text reveal" style="--d:.12s">Не нашли ответ? Напишите в Telegram — обсудим лично, без скриптов и продаж.</p>
+            <a class="btn btn--ghost btn--small reveal" style="--d:.16s" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
+
+          <div class="faq-list reveal" style="--d:.08s">
+            <div class="faq__item is-open">
+              <button class="faq__button" type="button" aria-expanded="true" aria-controls="faq1">
+                AURELIUS — это финансовый совет?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq1" role="region">
+                <div class="faq__panel-inner">
+                  <p>Нет. Клуб даёт аналитику, инструменты и образование. Решения принимаете вы и несёте ответственность за свой капитал.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq2">
+                Вы управляете средствами?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq2" role="region">
+                <div class="faq__panel-inner">
+                  <p>Нет. Клуб не принимает капитал в доверительное управление и не обещает доходность. Все торговые решения остаются за участником.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq3">
+                Нужен ли опыт в трейдинге?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq3" role="region">
+                <div class="faq__panel-inner">
+                  <p>Не обязательно. Формат подбирается на знакомстве: от инструментов и сигналов до наставничества. Важно не количество лет за графиком, а готовность следовать правилам.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq4">
+                Какой капитал нужен для участия?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq4" role="region">
+                <div class="faq__panel-inner">
+                  <p>Зависит от направления. Этот вопрос обсуждается на знакомстве — универсальной цифры нет, потому что риск-профиль у всех разный.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq5">
+                Что входит в участие?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq5" role="region">
+                <div class="faq__panel-inner">
+                  <p>Выбранные продукты, доступ к закрытому сообществу, разборы и поддержка куратора. Конкретный состав фиксируется до оплаты.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq6">
+                Можно ли выйти из клуба?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq6" role="region">
+                <div class="faq__panel-inner">
+                  <p>Да. Условия и сроки зависят от выбранного формата, они фиксируются до оплаты. Никаких скрытых автопродлений.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="faq__item">
+              <button class="faq__button" type="button" aria-expanded="false" aria-controls="faq7">
+                Почему доступ по заявке?
+                <span class="faq__icon" aria-hidden="true"></span>
+              </button>
+              <div class="faq__panel" id="faq7" role="region">
+                <div class="faq__panel-inner">
+                  <p>Чтобы сохранить качество среды и ограничить число участников. Нам важно, чтобы в клубе были люди с общим подходом к риску и капиталу.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 09. ФИНАЛЬНЫЙ ПРИЗЫВ ============ -->
+    <section class="invitation" id="invitation">
+      <div class="container">
+        <div class="invitation__panel reveal">
+          <div class="invitation__glow" aria-hidden="true"></div>
+          <p class="eyebrow">Invitation</p>
+          <h2>Доступ<br><em>по приглашению.</em></h2>
+          <p class="invitation__text">Если вам близок подход «сначала риск, потом прибыль» — начните с короткого разговора. Мы расскажем, как устроен клуб, и предложим формат.</p>
+          <a class="btn btn--primary btn--large" href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Запросить доступ <span aria-hidden="true">→</span></a>
+          <p class="invitation__note">Без обязательств. Без обещаний доходности.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ 10. ПОДВАЛ ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="brand" href="#top" aria-label="AURELIUS — на главную">
+            <svg class="brand__mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+              <path d="M24 3 45 24 24 45 3 24 24 3Z" stroke="currentColor" stroke-width="1"/>
+              <path d="M24 11 37 24 24 37 11 24 24 11Z" stroke="currentColor" stroke-width="1" opacity=".45"/>
+              <path d="M24 16v16M16 24h16" stroke="currentColor" stroke-width="1"/>
+            </svg>
+            <span class="brand__text">
+              <span class="brand__name">AURELIUS</span>
+              <span class="brand__sub">Private Trading Club</span>
+            </span>
+          </a>
+          <p class="footer__about">Закрытый торговый клуб для тех, кто ценит систему, тишину и капитал.</p>
+          <div class="footer__contacts">
+            <a href="https://t.me/" data-link="telegram" target="_blank" rel="noopener">Telegram</a>
+            <a href="mailto:hello@example.com" data-link="email">Email</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h3>Навигация</h3>
+          <a href="#club">О клубе</a>
+          <a href="#principles">Принципы</a>
+          <a href="#record">Результаты</a>
+          <a href="#circle">Отзывы</a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Продукты</h3>
+          <a href="#desk">Aurelius Desk</a>
+          <a href="#desk">Aurelius Quant</a>
+          <a href="#desk">Aurelius Terminal</a>
+          <a href="#desk">Aurelius Circle</a>
+        </div>
+
+        <div class="footer__col">
+          <h3>Документы</h3>
+          <a href="legal.html#privacy">Политика конфиденциальности</a>
+          <a href="legal.html#terms">Условия использования</a>
+          <a href="legal.html#risk">Дисклеймер о рисках</a>
+        </div>
+      </div>
+
+      <p class="footer__disclaimer">Торговля на финансовых рынках связана с высоким риском и возможностью полной потери капитала. AURELIUS не является инвестиционным советником, не управляет средствами участников и не гарантирует доходность. Прошлые результаты не гарантируют будущих. Информация на сайте носит ознакомительный характер и не является индивидуальной инвестиционной рекомендацией.</p>
+
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> AURELIUS. Все права защищены.</span>
+        <span>Доступ по заявке</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="to-top" id="toTop" type="button" aria-label="Наверх">↑</button>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
