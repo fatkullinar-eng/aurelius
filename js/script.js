@@ -431,3 +431,162 @@ const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = String(new Date().getFullYear());
 }
+
+/* ------------------------------------------------------------
+   13. Модальное окно заявки и отправка через Web3Forms
+   Ключ доступа лежит в скрытом поле access_key в index.html.
+   ------------------------------------------------------------ */
+
+const accessModal = document.getElementById("accessModal");
+const accessForm = document.getElementById("accessForm");
+const accessSuccess = document.getElementById("accessSuccess");
+const accessStatus = document.getElementById("accessStatus");
+const accessProduct = document.getElementById("accessProduct");
+
+if (accessModal && accessForm) {
+  let lastFormTrigger = null;
+
+  function setFormStatus(message, type) {
+    if (!accessStatus) return;
+    accessStatus.textContent = message;
+    accessStatus.className = "access-form__status" + (type ? " is-" + type : "");
+  }
+
+  function openAccessModal(product) {
+    if (mobileMenu && mobileMenu.classList.contains("is-open")) {
+      closeMenu();
+    }
+
+    accessForm.hidden = false;
+    accessForm.reset();
+    if (accessSuccess) accessSuccess.hidden = true;
+    if (accessProduct) accessProduct.value = product || "";
+    setFormStatus("", "");
+
+    accessModal.classList.add("is-open");
+    accessModal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("is-locked");
+
+    window.setTimeout(function () {
+      const nameInput = document.getElementById("accessName");
+      if (nameInput) nameInput.focus();
+    }, 80);
+  }
+
+  function closeAccessModal() {
+    accessModal.classList.remove("is-open");
+    accessModal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("is-locked");
+
+    if (lastFormTrigger && typeof lastFormTrigger.focus === "function") {
+      lastFormTrigger.focus();
+    }
+  }
+
+  document.querySelectorAll("[data-open-form]").forEach(function (trigger) {
+    trigger.addEventListener("click", function (event) {
+      event.preventDefault();
+      lastFormTrigger = trigger;
+
+      let product = trigger.getAttribute("data-product") || "";
+
+      if (!product) {
+        const productCard = trigger.closest(".product");
+        if (productCard) {
+          const productName = productCard.querySelector(".product__name");
+          if (productName) product = productName.textContent.trim();
+        }
+      }
+
+      openAccessModal(product);
+    });
+  });
+
+  accessModal.querySelectorAll("[data-modal-close]").forEach(function (closer) {
+    closer.addEventListener("click", closeAccessModal);
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && accessModal.classList.contains("is-open")) {
+      closeAccessModal();
+    }
+  });
+
+  accessModal.addEventListener("keydown", function (event) {
+    if (event.key !== "Tab") return;
+
+    const focusable = Array.prototype.filter.call(
+      accessModal.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([type="hidden"]):not([disabled]), textarea:not([disabled]), select:not([disabled])'
+      ),
+      function (element) {
+        return element.offsetParent !== null;
+      }
+    );
+
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
+  });
+
+  accessForm.addEventListener("submit", async function (event) {
+    event.preventDefault();
+
+    if (!accessForm.checkValidity()) {
+      accessForm.reportValidity();
+      return;
+    }
+
+    const keyField = accessForm.querySelector('input[name="access_key"]');
+    if (!keyField || !keyField.value.trim() || keyField.value.indexOf("ВАШ_КЛЮЧ") !== -1) {
+      setFormStatus("Форма ещё не подключена: добавьте ключ Web3Forms в index.html.", "error");
+      return;
+    }
+
+    const submitButton = accessForm.querySelector('button[type="submit"]');
+    const originalButton = submitButton ? submitButton.innerHTML : "";
+
+    if (submitButton) {
+      submitButton.disabled = true;
+      submitButton.textContent = "Отправляем...";
+    }
+    setFormStatus("", "");
+
+    try {
+      const response = await fetch(accessForm.action, {
+        method: "POST",
+        body: new FormData(accessForm),
+        headers: { Accept: "application/json" },
+      });
+
+      const data = await response.json();
+
+      if (!response.ok || !data.success) {
+        throw new Error(data.message || "Ошибка отправки");
+      }
+
+      accessForm.hidden = true;
+      if (accessSuccess) accessSuccess.hidden = false;
+      accessModal.querySelector(".modal__dialog").scrollTop = 0;
+    } catch (error) {
+      setFormStatus(
+        "Не получилось отправить заявку. Попробуйте ещё раз или напишите в Telegram.",
+        "error"
+      );
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButton;
+      }
+    }
+  });
+}
